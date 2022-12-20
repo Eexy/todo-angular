@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoService } from 'src/app/services/todo/todo.service';
 
 @Component({
   selector: 'app-todo-form',
@@ -8,7 +9,10 @@ import { Component } from '@angular/core';
 export class TodoFormComponent {
   title = 'todo';
 
+  constructor(private todoService: TodoService) {}
+
   onSubmit() {
-    console.info({ title: this.title });
+    this.todoService.addTodo(this.title);
+    this.title = '';
   }
 }
