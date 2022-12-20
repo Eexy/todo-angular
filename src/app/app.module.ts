@@ -5,9 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoFormComponent } from './components/todo-form/todo-form.component';
+import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
-  declarations: [AppComponent, TodoFormComponent],
+  declarations: [AppComponent, TodoFormComponent, TodoComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
