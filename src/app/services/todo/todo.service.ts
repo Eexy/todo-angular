@@ -26,10 +26,10 @@ export class TodoService {
     this.todos.next(newTodos);
   }
 
-  updateTodo(id: number, updates: Omit<Todo, 'id'>) {
+  updateTodo(id: number, updates: Partial<Omit<Todo, 'id'>>) {
     const updatedTodos = this.todos.value.map((todo) => {
-      if (todo.id) {
-        return { ...todo, updates };
+      if (todo.id === id) {
+        return { ...todo, ...updates };
       }
 
       return todo;

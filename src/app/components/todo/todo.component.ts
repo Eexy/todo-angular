@@ -17,4 +17,12 @@ export class TodoComponent {
       this.todoService.deleteTodo(this.todo.id);
     }
   }
+
+  completeTodo() {
+    if (this.todo) {
+      this.todoService.updateTodo(this.todo.id, {
+        isCompleted: !this.todo.isCompleted,
+      });
+    }
+  }
 }
