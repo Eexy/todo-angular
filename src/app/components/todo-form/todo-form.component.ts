@@ -4,10 +4,9 @@ import { TodoService } from 'src/app/services/todo/todo.service';
 @Component({
   selector: 'app-todo-form',
   templateUrl: './todo-form.component.html',
-  styleUrls: ['./todo-form.component.css'],
 })
 export class TodoFormComponent {
-  title = 'todo';
+  title = '';
 
   constructor(private todoService: TodoService) {}
 
