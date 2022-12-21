@@ -25,4 +25,15 @@ export class TodoService {
     const newTodos = this.todos.value.filter((todo) => todo.id !== id);
     this.todos.next(newTodos);
   }
+
+  updateTodo(id: number, updates: Omit<Todo, 'id'>) {
+    const updatedTodos = this.todos.value.map((todo) => {
+      if (todo.id) {
+        return { ...todo, updates };
+      }
+
+      return todo;
+    });
+    this.todos.next(updatedTodos);
+  }
 }
