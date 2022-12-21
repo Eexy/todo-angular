@@ -1,3 +1,6 @@
 <div *ngIf="todo">
-  <li>{{ todo.title }}</li>
+  <div class="flex gap-x-3 py-2">
+    <button class="h-6 w-6 border-slate-300 border-solid rounded-full border hover:border-slate-900"></button>
+    <div>{{ todo.title }}</div>
+  </div>
 </div>
